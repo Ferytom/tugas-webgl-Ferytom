@@ -3,13 +3,17 @@ function main() {
   var gl = kanvas.getContext('webgl');
 
   var vertices = [
-    -0.75, 0.75,
-    -0.5, 1.0,
+    -0.65, 0.75,
     -0.25, 0.75,
     -0.5, 0.5,
     -0.25, 0.25,
-    -0.5, 0.0,
-    -0.75, 0.25
+    -0.65, 0.25,
+    0.75, 0.75,
+    0.25, 0.75,
+    0.25, 0.5,
+    0.75, 0.5,
+    0.75, 0.25,
+    0.25, 0.25
   ];
 
   var buffer = gl.createBuffer();
@@ -65,5 +69,6 @@ function main() {
   //            Merah, Hijau, Biru, Transparansi
   gl.clear(gl.COLOR_BUFFER_BIT);
 
-  gl.drawArrays(gl.LINE_STRIP, 0, 7);
+  gl.drawArrays(gl.LINE_STRIP, 0, 5);
+  gl.drawArrays(gl.LINE_STRIP, 5, 6);
 }
