@@ -13,7 +13,18 @@ function main() {
     0.25, 0.5,
     0.75, 0.5,
     0.75, 0.25,
-    0.25, 0.25
+    0.25, 0.25,
+    -0.75, -0.25,
+    -0.25, -0.25,
+    -0.5, -0.25,
+    -0.5, -0.75,
+    -0.75, -0.75,
+    -0.25, -0.75,
+    0.25, -0.75,
+    0.25, -0.25,
+    0.5, -0.5,
+    0.75, -0.25,
+    0.75, -0.75
   ];
 
   var buffer = gl.createBuffer();
@@ -71,4 +82,8 @@ function main() {
 
   gl.drawArrays(gl.LINE_STRIP, 0, 5);
   gl.drawArrays(gl.LINE_STRIP, 5, 6);
+  gl.drawArrays(gl.LINE_STRIP, 11, 2);
+  gl.drawArrays(gl.LINE_STRIP, 13, 2);
+  gl.drawArrays(gl.LINE_STRIP, 15, 2);
+  gl.drawArrays(gl.LINE_STRIP, 17, 5);
 }
