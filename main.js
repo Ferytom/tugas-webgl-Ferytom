@@ -5,9 +5,12 @@ function main() {
   var vertices = [
     -0.65, 0.75,
     -0.25, 0.75,
-    -0.5, 0.5,
+    -0.25, 0.75,
     -0.25, 0.25,
     -0.65, 0.25,
+    -0.25, 0.25,
+    -0.65, 0.5,
+    -0.25, 0.5,
     0.75, 0.75,
     0.25, 0.75,
     0.25, 0.5,
@@ -89,12 +92,18 @@ function main() {
   //            Merah, Hijau, Biru, Transparansi
   gl.clear(gl.COLOR_BUFFER_BIT);
 
-  gl.drawArrays(gl.LINE_STRIP, 0, 5);
-  gl.drawArrays(gl.LINE_STRIP, 5, 6);
-  gl.drawArrays(gl.TRIANGLE_FAN, 11, 4);
+  // make 3
+  gl.drawArrays(gl.LINE_STRIP, 0, 2);
+  gl.drawArrays(gl.LINE_STRIP, 2, 2);
+  gl.drawArrays(gl.LINE_STRIP, 4, 2);
+  gl.drawArrays(gl.LINE_STRIP, 6, 2);
+  //make 5
+  gl.drawArrays(gl.LINE_STRIP, 8, 6);
+  // make i
+  gl.drawArrays(gl.TRIANGLE_FAN, 14, 4);
   // make M
-  gl.drawArrays(gl.TRIANGLE_FAN, 15, 4);
-  gl.drawArrays(gl.TRIANGLE_FAN, 19, 4);
-  gl.drawArrays(gl.TRIANGLE_FAN, 23, 4);
-  gl.drawArrays(gl.TRIANGLE_FAN, 27, 4);
+  gl.drawArrays(gl.TRIANGLE_FAN, 18, 4);
+  gl.drawArrays(gl.TRIANGLE_FAN, 22, 4);
+  gl.drawArrays(gl.TRIANGLE_FAN, 26, 4);
+  gl.drawArrays(gl.TRIANGLE_FAN, 30, 4);
 }
