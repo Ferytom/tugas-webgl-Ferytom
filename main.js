@@ -30,6 +30,10 @@ function main() {
     0.4, -0.5,
     0.75, -0.1,
     0.75, -0.2,    
+    0.65, -0.1,
+    0.75, -0.1,
+    0.75, -0.75,
+    0.65, -0.75,
   ];
 
   var buffer = gl.createBuffer();
@@ -92,4 +96,5 @@ function main() {
   gl.drawArrays(gl.TRIANGLE_FAN, 15, 4);
   gl.drawArrays(gl.TRIANGLE_FAN, 19, 4);
   gl.drawArrays(gl.TRIANGLE_FAN, 23, 4);
+  gl.drawArrays(gl.TRIANGLE_FAN, 27, 4);
 }
